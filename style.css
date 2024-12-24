@@ -1,3 +1,64 @@
+/* For small screens (phones) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .section_1 {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center; /* Center-align text */
+  }
+
+  .section_1 img {
+    max-width: 100%; /* Full width for smaller screens */
+  }
+}
+
+/* For medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+/* For large screens (desktops) */
+@media (min-width: 1025px) {
+  .container {
+    padding: 40px;
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.item {
+  flex: 1 1 calc(33.333% - 10px); /* Three columns */
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .item {
+    flex: 1 1 calc(50% - 10px); /* Two columns */
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    flex: 1 1 100%; /* Single column */
+  }
+}
+
+#hero_img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
@@ -7,38 +68,13 @@ body {
   margin: 0;
 }
 
-/* .header {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  align-items: flex-end;
-  position: flex-end;
-}
-
-.header li {
-  display: inline;
-  margin: 0 10px;
-  color: white;
-  padding: 10px 80px;
-}
-
-.header li a {
-  color: white;
-  text-decoration: none;
-}
-.header li a:hover {
-  color: rgb(140, 246, 132);
-  text-decoration: none;
-} */
-
 .header {
   background-color: #333;
   color: white;
   text-align: right; /* Align text to the right */
   padding: 30px 20px; /* Add padding for spacing */
   display: flex; /* Use flexbox for layout */
-  justify-content: flex-end; /* Align items to the right */
+  justify-content: center;
   align-items: center; /* Vertically align items */
 }
 
@@ -132,6 +168,34 @@ body {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   cursor: pointer;
 }
+/* .brief {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.brief #article {
+  max-width: 55%;
+  background-color: #602b69;
+  
+} */
+/* Ensure the body takes full height of the screen */
+
+.brief {
+  display: flex;
+  flex-direction: column; /* Stack h1 and p vertically */
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  text-align: center; /* Center text */
+}
+
+.brief h1 {
+  margin-bottom: 5px; /* Space between the heading and the paragraph */
+}
+
+.brief #article {
+  max-width: 70%; /* Control width of the paragraph */
+  color: rgb(116, 116, 116); /* Set text color for contrast */
+}
 
 .card {
   background-color: rgb(235, 227, 240);
@@ -159,6 +223,7 @@ body {
   font-size: 14px;
   color: #666;
   margin-bottom: 15px;
+  max-width: 65%;
 }
 
 #im_1 {
@@ -170,7 +235,7 @@ body {
   margin-bottom: 10%; /* Example: Add spacing */
 }
 #im_2 {
-  width: 100%; /* Set desired width */
+  width: 50%; /* Set desired width */
   height: auto; /* Maintain aspect ratio */
   /* Add additional styles below as needed */
   margin-bottom: 1%; /* Example: Add spacing */
@@ -196,116 +261,61 @@ body {
   margin-left: 60px;
   margin-right: 60px;
 }
-/* 
-.banner {
-  width: 100%;
-  display: flex;
-  overflow: hidden;
-  animation: slideRight 20s infinite;
-}
-.banner img {
-  width: 33.33%;
-  height: auto;
-}
-.header {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  align-items: flex-end;
-}
-.header li {
-  display: inline;
-  margin: 0 10px;
-  color: white;
-  padding: 10px 80px;
-}
-.header li a {
-  color: white;
-  text-decoration: none;
+/* test area */
+.section_1 {
+  margin-left: 8%;
+  display: flex; /* Align children side by side */
+  align-items: center; /* Vertically center the content */
+  gap: 20px; /* Add space between the image and text */
+  padding: 20px; /* Add some padding around the section */
 }
 
-.header li a:hover {
-  color: #cdadf7;
+.section_1 img {
+  max-width: 40%; /* Adjust the image size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: add rounded corners */
 }
 
-.form_box {
-  width: 400px;
-  height: 500px;
-  background-color: rgba(202, 202, 202, 0.589);
-  align-items: center;
-  justify-content: center;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.section_description_1 {
+  max-width: 60%; /* Ensure text doesn't take too much space */
 }
 
-.hero {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.section_description_1 h2 {
+  font-size: 1.5rem; /* Adjust heading size */
+  margin-bottom: 10px; /* Add spacing below the heading */
 }
 
-.hero img {
-  width: 100%;
-  height: 80%;
-  object-fit: cover;
+.section_description_1 p {
+  font-size: 1rem; /* Adjust paragraph size */
+  line-height: 1.6; /* Improve readability */
 }
 
-
-.card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+/*  */
+.section_2 {
+  margin-left: 10%;
+  display: flex; /* Align children side by side */
+  align-items: center; /* Vertically center the content */
+  gap: 20px; /* Add space between the image and text */
+  padding: 20px; /* Add some padding around the section */
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.section_2 img {
+  max-width: 20%; /* Adjust the image size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: add rounded corners */
 }
 
-.card-img {
-  width: 100%;
-  height: 180px;
+.section_description_2 {
+  max-width: 60%; /* Ensure text doesn't take too much space */
+  margin-left: 8%;
 }
 
-.card-content {
-  padding: 15px;
+.section_description_2 h2 {
+  font-size: 1.5rem; /* Adjust heading size */
+  margin-bottom: 10px; /* Add spacing below the heading */
 }
 
-.card-title {
-  font-size: 20px;
-  margin: 0;
-  margin-bottom: 10px;
-  color: #333;
+.section_description_2 p {
+  font-size: 1rem; /* Adjust paragraph size */
+  line-height: 1.6; /* Improve readability */
 }
-
-.card-description {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-.card-btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
-}
-
-.card-btn:hover {
-  background-color: #0056b3;
-} */

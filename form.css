@@ -1,0 +1,87 @@
+/* For small screens (phones) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .section_1 {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center; /* Center-align text */
+  }
+
+  .section_1 img {
+    max-width: 100%; /* Full width for smaller screens */
+  }
+}
+
+/* For medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+/* For large screens (desktops) */
+@media (min-width: 1025px) {
+  .container {
+    padding: 40px;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form_box {
+  width: 30%;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.form_box h2,
+.form_box h3 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form_box label {
+  display: block;
+  margin-left: 20%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form_box input {
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 10px;
+  margin-left: 20%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form_box input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.form_box input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#btn {
+  width: 20%;
+}
