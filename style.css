@@ -1,0 +1,311 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* .header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  align-items: flex-end;
+  position: flex-end;
+}
+
+.header li {
+  display: inline;
+  margin: 0 10px;
+  color: white;
+  padding: 10px 80px;
+}
+
+.header li a {
+  color: white;
+  text-decoration: none;
+}
+.header li a:hover {
+  color: rgb(140, 246, 132);
+  text-decoration: none;
+} */
+
+.header {
+  background-color: #333;
+  color: white;
+  text-align: right; /* Align text to the right */
+  padding: 30px 20px; /* Add padding for spacing */
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Vertically align items */
+}
+
+.header ul {
+  list-style: none; /* Remove bullet points from the list */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flex layout for list items */
+  gap: 20px;
+}
+
+.header li {
+  color: white;
+  gap: 80%;
+}
+
+.header li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 30px;
+}
+
+#profile {
+  color: white;
+  background-color: #f4f4f9;
+  position: relative;
+}
+
+.header li a:hover {
+  color: #ab63b8;
+  font-weight: bold;
+  transition-duration: 0.3s;
+}
+
+.hero {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.hero img {
+  width: 100%;
+  background-color: rgba(148, 27, 27, 0.5); /* Change color and transparency */
+}
+.text-overlay {
+  letter-spacing: 10px;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.text-overlay span {
+  color: #c393cc;
+  letter-spacing: 0px;
+}
+.hero-btn {
+  position: absolute;
+  border-radius: 10px;
+  background-color: #ab63b8;
+  color: white;
+  border: none;
+  top: 53%;
+  left: 9%;
+  font-size: 20px;
+  width: 10%;
+  height: 5%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  transition-duration: 0.3s;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #602b69;
+  color: white;
+  border: none;
+  top: 53%;
+  left: 9%;
+  font-size: 20px;
+  width: 10%;
+  height: 5%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.card {
+  background-color: rgb(235, 227, 240);
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 25vh;
+}
+
+.card-content {
+  padding: 15px;
+}
+.card-title {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+#im_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%; /* Set desired width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10%; /* Example: Add spacing */
+}
+#im_2 {
+  width: 100%; /* Set desired width */
+  height: auto; /* Maintain aspect ratio */
+  /* Add additional styles below as needed */
+  margin-bottom: 1%; /* Example: Add spacing */
+}
+#im_3 {
+  width: 100%; /* Set desired width */
+  height: auto; /* Maintain aspect ratio */
+  /* Add additional styles below as needed */
+  margin-bottom: 10%; /* Example: Add spacing */
+}
+
+.Container {
+  display: flex;
+  justify-content: space-around; /* Distribute space evenly */
+  gap: 20px; /* Space between the cards */
+  flex-wrap: wrap; /* Allow cards to wrap onto the next row if needed */
+  padding: 20px;
+}
+
+.devider p {
+  background-color: rgb(80, 81, 82);
+  max-height: 2px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+/* 
+.banner {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  animation: slideRight 20s infinite;
+}
+.banner img {
+  width: 33.33%;
+  height: auto;
+}
+.header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  align-items: flex-end;
+}
+.header li {
+  display: inline;
+  margin: 0 10px;
+  color: white;
+  padding: 10px 80px;
+}
+.header li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header li a:hover {
+  color: #cdadf7;
+}
+
+.form_box {
+  width: 400px;
+  height: 500px;
+  background-color: rgba(202, 202, 202, 0.589);
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.card-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.card-btn:hover {
+  background-color: #0056b3;
+} */
